@@ -1,9 +1,11 @@
 package com.series.tracker.dto;
 
-import com.series.tracker.domain.Type;
+import com.series.tracker.domain.enums.Genre;
 import lombok.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -11,9 +13,18 @@ import jakarta.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SeriesCreateUpdateCommand {
+    @NonNull
     @NotBlank
     private String title;
+    @NonNull
     @NotNull
-    private Type type;
+    private Genre genre;
+
+    private LocalDateTime addedAt;
+    private int season;
+    private int episode;
+    private boolean isFavourite;
+    private boolean isFinished;
+
 
 }

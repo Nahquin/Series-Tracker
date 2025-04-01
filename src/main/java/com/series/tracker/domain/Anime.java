@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 
-public class Series {
+public class Anime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

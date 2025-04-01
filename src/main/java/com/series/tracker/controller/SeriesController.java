@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import static org.springframework.http.HttpStatus.CREATED;
 
 @Slf4j
-@RequestMapping("api/series")
+@RequestMapping("tracker/series")
 @RestController
 public class SeriesController{
 
@@ -27,6 +27,7 @@ public class SeriesController{
     @PostMapping("/save")
     public ResponseEntity<SeriesInfo> save( @Valid @RequestBody SeriesCreateUpdateCommand command) {
         //log.info("Http request, POST /api/, body: " + command.toString());
+        System.out.println(command.toString());
         SeriesInfo seriesInfo = seriesService.save(command);
         return new ResponseEntity<>(seriesInfo, CREATED);
     }

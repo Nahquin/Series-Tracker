@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 
-public class Series {
+public class Film {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,9 +31,6 @@ public class Series {
 
     @Enumerated(EnumType.STRING)
     private Genre genre;
-
-    private int season;
-    private int episode;
 
     private boolean isFavourite;
     private boolean isFinished;
