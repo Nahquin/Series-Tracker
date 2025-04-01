@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @NoArgsConstructor
+
 public class Series {
 
     @Id
